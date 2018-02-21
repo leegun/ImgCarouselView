@@ -58,7 +58,7 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.prefetchDataSource = self
-        collectionView.registerNibForCellWithType(ImgCarouselCollectionCell.self)
+        collectionView.registerNibForCellWithTypeForICV(ImgCarouselCollectionCell.self)
         collectionView.showsHorizontalScrollIndicator = false
     }
     
@@ -80,7 +80,7 @@ extension ImgCarouselView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCellWithType(ImgCarouselCollectionCell.self, forIndexPath: indexPath)
+            let cell = collectionView.dequeueReusableCellWithTypeForICV(ImgCarouselCollectionCell.self, forIndexPath: indexPath)
             if indexPath.row < imageSources.count {
                 cell.applyStyles(contentMode: cellContentMode)
                 cell.configure(with: imageSources[indexPath.row])

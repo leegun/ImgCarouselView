@@ -9,18 +9,18 @@
 import UIKit
 
 public extension UICollectionView {
-    public func registerNibForCellWithType<T: UICollectionViewCell>(_ type: T.Type) {
+    public func registerNibForCellWithTypeForICV<T: UICollectionViewCell>(_ type: T.Type) {
         let className = String(describing: T.self)
         let nib = UINib(nibName: className, bundle: Bundle(for: type))
         register(nib, forCellWithReuseIdentifier: className)
     }
     
-    public func registerClassForCellWithType<T: UICollectionViewCell>(_ type: T.Type) {
+    public func registerClassForCellWithTypeForICV<T: UICollectionViewCell>(_ type: T.Type) {
         let className = String(describing: T.self)
         register(T.self, forCellWithReuseIdentifier: className)
     }
     
-    public func dequeueReusableCellWithType<T: UICollectionViewCell>(
+    public func dequeueReusableCellWithTypeForICV<T: UICollectionViewCell>(
         _ type: T.Type,
         forIndexPath indexPath: IndexPath) -> T {
         return dequeueReusableCell(
