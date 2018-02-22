@@ -15,7 +15,7 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
     fileprivate var cellContentMode: UIViewContentMode = .scaleAspectFit
     
     // MARK: - View Elements
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet public weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
     // MARK: - for UICollectionViewDataSourcePrefetching
