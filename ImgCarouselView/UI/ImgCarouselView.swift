@@ -52,19 +52,18 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
         updatePageControl()
         applyStyles()
         collectionView.reloadData()
-        
-        pagingAnimate()
+//        pagingAnimate()
     }
     
-    private func pagingAnimate() {
-        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
-            for i in 0...(self?.imageSources)!.count {
-                self?.collectionView.scrollToItem(at: IndexPath(row: i, section: 0), at: UICollectionViewScrollPosition.top, animated: true)
-                sleep(2)
-            }
-            self?.pagingAnimate()
-        }
-    }
+//    private func pagingAnimate() {
+//        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+//            for i in 0...(self?.imageSources)!.count {
+//                self?.collectionView.scrollToItem(at: IndexPath(row: i, section: 0), at: UICollectionViewScrollPosition.top, animated: true)
+//                sleep(2)
+//            }
+//            self?.pagingAnimate()
+//        }
+//    }
     
     private func configureCollectionView() {
         collectionView.delegate = self
