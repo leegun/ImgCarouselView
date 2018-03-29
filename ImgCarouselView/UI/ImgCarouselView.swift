@@ -44,7 +44,7 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
     ) {
         self.cellContentMode = cellContentMode
         self.imageSources = imageSources
-        configureViewParts()
+        configureViewParts()
     }
     
     // MARK: - private funcs
