@@ -44,7 +44,7 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
     ) {
         self.cellContentMode = cellContentMode
         self.imageSources = imageSources
-        configureViewParts()
+        configureViewParts()
     }
     
     // MARK: - private funcs
@@ -96,6 +96,7 @@ extension ImgCarouselView: UICollectionViewDataSource {
                 cell.applyStyles(contentMode: cellContentMode)
                 cell.configure(with: imageSources[indexPath.row])
             }
+            print("🐊 cell: \(cell.bounds.size)")
             return cell
     }
 }

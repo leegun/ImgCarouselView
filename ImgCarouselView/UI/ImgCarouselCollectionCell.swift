@@ -35,6 +35,8 @@ public extension ImgCarouselCollectionCell {
         switch imageSource {
         case .image(let image):
             imageView.image = image
+            
+            print("🐊 imageView.bounds.size: \(imageView.bounds.size)")
         case .url(let url):
             print(url.absoluteString)
             Nuke.loadImage(with: url, into: imageView)
