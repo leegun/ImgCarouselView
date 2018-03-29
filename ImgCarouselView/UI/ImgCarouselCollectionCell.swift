@@ -39,7 +39,7 @@ public extension ImgCarouselCollectionCell {
             print("🐊 imageView.bounds.size: \(imageView.bounds.size)")
         case .url(let url):
             print(url.absoluteString)
-            Nuke.loadImage(with: url, into: imageView)
+            Manager.shared.loadImage(with: url, into: imageView)
         }
     }
 }
