@@ -16,7 +16,7 @@ public final class ImgCarouselView: UIView, XibInstantiatable {
     
     // MARK: - View Elements
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet public weak var pageControl: UIPageControl!
     
     // MARK: - for UICollectionViewDataSourcePrefetching
     fileprivate let preheater = Preheater(manager: Manager.shared)
